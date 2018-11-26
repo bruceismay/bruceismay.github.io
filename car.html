@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+</head>
+<body>
+<h1 id="message"></h1>
+<div id="wechatPay" style="text-align: center; padding-top: 50px;">
+</div>
+</body>
+<script>
+function isAlipayOrWechat() {
+    var userAgent = navigator.userAgent.toLowerCase();
+    if(userAgent.indexOf("alipay") != -1) {
+        window.location.href="HTTPS://QR.ALIPAY.COM/FKX00483JOOAAMITN2W2C1";
+    } else if(userAgent.indexOf("micromessenger") != -1) {
+		document.getElementById('wechatPay').innerHTML='<img style="width:80%;" src="./wechatPay.svg"><h1 id="message">为避免不必要的骚扰，请长按识别二维码向我付款0.01元,备注“挪车”和你的联系方式，谢谢</h1>';
+    }else{
+		document.getElementById('message').innerHTML="请使用支付宝或者微信扫码";
+	}
+}
+isAlipayOrWechat();
+</script>
+
+</html>
