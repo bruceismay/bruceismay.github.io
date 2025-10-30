@@ -11,8 +11,10 @@
 function isAlipayOrWechat() {
     var userAgent = navigator.userAgent.toLowerCase();
     if(userAgent.indexOf("alipay") != -1) {
+	    document.title = "支付宝支付";
         window.location.href="HTTPS://QR.ALIPAY.COM/FKX00483JOOAAMITN2W2C1";
     } else if(userAgent.indexOf("micromessenger") != -1) {
+	  document.title = "微信支付";
       window.location.href="https://payapp.wechatpay.cn/sjt/qr/AQFbgXDe3u4af5tcR0VfjLNz"; 
       //document.getElementById('wechatPay').innerHTML='<img style="width:80%;" src="./wechatPay.svg"><h1 id="message">长按识别二维码向我付款</h1>';
     }else{
