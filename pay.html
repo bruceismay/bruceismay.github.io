@@ -15,7 +15,8 @@ function isAlipayOrWechat() {
         window.location.href="HTTPS://QR.ALIPAY.COM/FKX00483JOOAAMITN2W2C1";
     } else if(userAgent.indexOf("micromessenger") != -1) {
 	  document.title = "微信支付";
-      window.location.href="https://payapp.wechatpay.cn/sjt/qr/AQFbgXDe3u4af5tcR0VfjLNz"; 
+      //window.location.href="https://payapp.wechatpay.cn/sjt/qr/AQFbgXDe3u4af5tcR0VfjLNz"; 
+window.location.href="https://payapp.wechatpay.cn/qr/AgHW2H6RPepGLkBEPadzJ0pi?t=vwEA#wechat_pay"
       //document.getElementById('wechatPay').innerHTML='<img style="width:80%;" src="./wechatPay.svg"><h1 id="message">长按识别二维码向我付款</h1>';
     }else{
 		document.getElementById('message').innerHTML="请使用支付宝或者微信扫码";
